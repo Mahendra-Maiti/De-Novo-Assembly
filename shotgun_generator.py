@@ -4,14 +4,16 @@
 from random import randint
 import argparse
 import time
+import os
 
 class shotgun:
-    def __init__(self,input_string,K,output_file_name):
+    def __init__(self,input_string,K,output_dir_name):
         self.input_string=input_string
         self.K=K
         self._substrings=[]
         self._generate_substrings()
-        self._out_file_name=output_file_name
+        self.output_directory="output/"+output_dir_name
+        self._out_file_name="Substrings.txt"
         self.counter=0
 
 
@@ -36,7 +38,8 @@ class shotgun:
     
 
     def dump_substrings(self):
-        fw=open('output/'+self._out_file_name,'w')
+        os.mkdir(self.output_directory)
+        fw=open(self.output_directory+"/"+self._out_file_name,'w')
         for substring in self._substrings:
             fw.write(substring+"\n")
         fw.close()
@@ -52,20 +55,16 @@ def make_arg_parser():
                         required=True,
                         help="Path to input string file")    #Fasta file path
 
-    parser.add_argument("-k","--maxK",
+    parser.add_argument("-k","--k",
                         default=argparse.SUPPRESS,
                         required=True,
                         help="Length of generated substrings K")  
 
-    parser.add_argument("-o","--output",
-                        default=argparse.SUPPRESS,
-                        required=True,
-                        help="Name of output file")
 
-    parser.add_argument("-rc","--runcount",
+    parser.add_argument("-l","--length",
                         default=1,
                         required=False,
-                        help="Number of runs")
+                        help="length of substring")
 
     return parser
 
@@ -78,20 +77,13 @@ def parse_input(input_file_name):               #first line in the input file sh
 if __name__ == '__main__':
     parser = make_arg_parser()
     args = parser.parse_args()
-    runcount=int(args.runcount)
-    max_k=int(args.maxK)
-    current_length=25
     input_string=parse_input(args.input)
+    current_length=int(args.length)
+    
+    SG=shotgun(input_string[:current_length],int(args.k),args.k+"_"+str(current_length))
+    SG.dump_substrings()
+    
 
-    while runcount:
-        for current_K in range(3,max_k+1):
-            tf=open('timing.txt','a')
-            start_time=time.time()
-            SG=shotgun(input_string[:current_length],current_K,str(current_K)+"_"+str(current_length)+args.output)
-            SG.dump_substrings()
-            end_time=time.time()
-            tf.write("K:"+str(current_K)+"\t"+"len:"+str(current_length)+"\t"+str(end_time-start_time)+"\n")
-            tf.close()
-        
-        runcount=runcount-1
-        current_length=current_length*2
+
+
+
