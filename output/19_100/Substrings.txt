@@ -1,12 +1,8 @@
 taaccctaaccctaaccct
 ccctaaccctaaccctaac
 accctaaccctaaccctaa
-cctaaccctaaccctaacc
-ccctaaccctaaccctaac
-taaccctaaccctaaccct
 accctaaccctaaccctaa
-ctaaccctaaccctaaccc
 aaccctaaccctaacccta
-ccctaaccctaaccctaac
+aaccctaaccctaacccta
+taaccctaaccctaaccct
 ctaaccctaaccctaaccc
-accctaaccctaaccctaa

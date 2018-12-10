@@ -28,9 +28,29 @@ class euler:
             self.walk(destination)
         self.node_list.append(node)
 
+
+    def walk_iter(self,node):
+        '''
+            Iterative version of eulerian walk
+        '''
+        stack=[]
+        stack.append(node)
+
+        while len(stack)> 0:
+            curr_node=stack[-1]
+            if len(self.G[curr_node])==0:
+                self.node_list.append(curr_node)
+                stack.pop()
+                continue
+            if len(self.G[curr_node])>0:
+                destination=self.G[curr_node].pop() 
+                stack.append(destination)
+
     def reconstruct(self):
-        self.walk(next(iter(self.G)))
+        #self.walk(next(iter(self.G)))
+        self.walk_iter(next(iter(self.G)))
         self.node_list=self.node_list[::-1]
+        #print(self.node_list)
         self.final_string=E.node_list[0]+''.join(map(lambda x: x[-1],E.node_list[1:]))
 
     def dump_output(self):
@@ -45,13 +65,13 @@ def make_arg_parser():
     parser.add_argument("-i","--input",
                         default=argparse.SUPPRESS,
                         required=True,
-                        help="Path to input edge file")    #Fasta file path
+                        help="Path to input edge file")    
 
 
     parser.add_argument("-o","--output",
                         default=argparse.SUPPRESS,
                         required=True,
-                        help="Path to output file")    #Fasta file path
+                        help="Path to output file")    
     return parser
     
 
@@ -63,3 +83,4 @@ if __name__ == '__main__':
     E.reconstruct()
     #print(E.final_string)
     E.dump_output()
+

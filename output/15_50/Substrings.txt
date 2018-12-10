@@ -1,6 +1,6 @@
 taaccctaaccctaa
 ctaaccctaacccta
-ccctaaccctaaccc
+accctaaccctaacc
+ctaaccctaacccta
 aaccctaaccctaac
 accctaaccctaacc
-ccctaaccctaaccc

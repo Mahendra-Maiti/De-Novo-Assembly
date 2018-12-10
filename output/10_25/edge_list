@@ -4,12 +4,6 @@ accctaa	ccctaac
 ccctaac	cctaacc
 cctaacc	ctaaccc
 ctaaccc	taaccct
-ccctaac	cctaacc
-cctaacc	ctaaccc
-ctaaccc	taaccct
-cctaacc	ctaaccc
-ctaaccc	taaccct
 taaccct	aacccta
-cctaacc	ctaaccc
-ctaaccc	taaccct
-taaccct	aacccta
+aacccta	accctaa
+accctaa	ccctaac

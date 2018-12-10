@@ -4,15 +4,9 @@ acc	ccc
 aac	acc
 acc	ccc
 ccc	cct
-ccc	cct
-cct	cta
-cta	taa
-cct	cta
 cta	taa
 taa	aac
-acc	ccc
-ccc	cct
-cct	cta
+aac	acc
 cct	cta
 cta	taa
 taa	aac

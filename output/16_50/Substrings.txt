@@ -1,4 +1,7 @@
 taaccctaaccctaac
 cctaaccctaacccta
-ctaaccctaaccctaa
+accctaaccctaaccc
+ccctaaccctaaccct
+taaccctaaccctaac
+taaccctaaccctaac
 ctaaccctaaccctaa

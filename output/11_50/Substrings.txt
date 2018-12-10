@@ -1,8 +1,9 @@
 taaccctaacc
 ccctaacccta
 cctaaccctaa
-taaccctaacc
-ccctaacccta
 accctaaccct
-aaccctaaccc
-ctaaccctaac
+ccctaacccta
+taaccctaacc
+taaccctaacc
+cctaaccctaa
+accctaaccct

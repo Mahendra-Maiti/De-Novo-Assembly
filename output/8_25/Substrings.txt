@@ -1,4 +1,6 @@
 taacccta
 ctaaccct
+ccctaacc
 taacccta
-aaccctaa
+ccctaacc
+cctaaccc

@@ -1,8 +1,8 @@
 taacc
 accct
 cccta
-cctaa
-accct
 ctaac
-cccta
+aaccc
+ctaac
+accct
 taacc

@@ -1,12 +1,10 @@
 taaccctaaccctaa
 aaccctaaccctaac
-accctaaccctaacc
-cctaaccctaaccct
-taaccctaaccctaa
-ctaaccctaacccta
-cctaaccctaaccct
-ctaaccctaacccta
 ccctaaccctaaccc
-accctaaccctaacc
+taaccctaaccctaa
+taaccctaaccctaa
 cctaaccctaaccct
 ctaaccctaacccta
+cctaaccctaaccct
+aaccctaaccctaac
+taaccctaaccctaa
