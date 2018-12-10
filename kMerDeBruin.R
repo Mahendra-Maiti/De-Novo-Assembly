@@ -103,7 +103,7 @@ eds <- createEdgeList(data)
 filepath3 <- paste(filepath1,"edge_list",sep = "/")
 write.table(eds,file = filepath3,col.names = FALSE, row.names = FALSE,sep = "\t", quote= FALSE)
 
-g <- graph(eds)
+g <- graph_from_edgelist(eds, directed = TRUE)
 
 
 jpeg(paste(filepath1,"plot.jpg",sep="/"))
