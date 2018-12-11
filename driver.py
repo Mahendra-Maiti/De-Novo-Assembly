@@ -45,14 +45,16 @@ if __name__ == '__main__':
     rc=int(args.runcount)
     max_k=int(args.maxk)
 
-    current_length=25
+    current_length=100
 
     input_string=parse_input(args.input)
 
     print("Process started at "+str(datetime.now().time()))
 
     while rc:
-        for current_K in range(4,max_k+1):
+        k_min=int(current_length/20)
+        k_max=int(current_length/10)
+        for current_K in range(k_min,k_max+1):
             print("K: "+str(current_K)+" length:"+str(current_length))
             tf=open('performance_data.txt','a')
             start_time=time.time()
@@ -73,7 +75,7 @@ if __name__ == '__main__':
             f=open(reconstructed_string_file,'r')
             lines=[line.rstrip('\n') for line in open(reconstructed_string_file)]
 
-            tf.write("K:"+str(current_K)+"\t"+"len:"+str(current_length)+"\t"+"runtime:"+str(end_time-start_time)+"\t"+str(percentage_error.calculate(input_string,lines[0]))+str("\n"))
+            tf.write("K:"+str(current_K)+"\t"+"len:"+str(current_length)+"\t"+"runtime:"+str(end_time-start_time)+"\t"+"error:"+str(percentage_error.calculate(input_string,lines[0]))+"\t"+"recon_len:"+str(len(lines[0]))+str("\n"))
             tf.close()
         current_length=current_length*2
         rc=rc-1

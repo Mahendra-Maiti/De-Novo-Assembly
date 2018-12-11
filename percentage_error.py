@@ -8,5 +8,5 @@ class percentage_error:
             if original_string[i]!=reconstructed_string[i]:
                 count=count+1
         
-        return float(length-count)/float(length)
+        return float(count)/float(length)
 
