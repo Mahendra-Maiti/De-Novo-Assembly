@@ -1,3 +1,6 @@
+'''
+        Author: Ayush Tyagi
+'''
 # k-Mer generation and De Bruin Graph algo
 
 

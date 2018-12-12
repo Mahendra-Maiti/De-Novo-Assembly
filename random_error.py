@@ -1,3 +1,6 @@
+'''
+        Author: Shivam Singh
+'''
 import argparse
 import random
 def make_arg_parser():
@@ -66,8 +69,11 @@ def randomize(result):
             result[randInt-1] = randList[index]
         i = i+100
     finalString = "".join(result)
+    extra='N'*10000
+    finalString=extra+finalString+extra
     print(len(finalString))
     f = open("output.fa","w")
+    f.write("error_string >"+"\n")
     f.write(finalString)
     f.close()
     # print(result)
